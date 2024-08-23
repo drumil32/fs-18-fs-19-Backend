@@ -2,30 +2,30 @@ import axios from "axios";
 import * as cheerio from "cheerio";
 import fs from "fs";
 
-const filePath = './amazon-mobile.txt';
+const filePath = './welfound-jobs.txt';
 
 async function amazonScrapping() {
     try {
-        const response = await axios.get('https://www.amazon.in/s?k=mobile');
-        // console.log(response.data);
-        // writeFile(filePath, response.data);
+        const response = await axios.get('https://wellfound.com/location/united-states');
+        console.log(response.data);
+        writeFile(filePath, response.data);
         const mobileInformation = [];
-        const data = fs.readFileSync(filePath, 'utf8');
+        // const data = fs.readFileSync(filePath, 'utf8');
         // console.log(data);
-        const $ = cheerio.load(data);
-        $('.a-price-whole').each((index, tag) => {
-            // console.log(tag);
-            mobileInformation[index] = {};
-            mobileInformation[index].price = $(tag).text();
-            // console.log($(tag).text());
-        });
-        $('.a-size-medium.a-color-base.a-text-normal').each((index, tag) => {
-            mobileInformation[index].name = $(tag).text();
-            // console.log($(tag).text());
-        });
-        console.log(mobileInformation);
+        // const $ = cheerio.load(data);
+        // $('.a-price-whole').each((index, tag) => {
+        //     // console.log(tag);
+        //     mobileInformation[index] = {};
+        //     mobileInformation[index].price = $(tag).text();
+        //     // console.log($(tag).text());
+        // });
+        // $('.a-size-medium.a-color-base.a-text-normal').each((index, tag) => {
+        //     mobileInformation[index].name = $(tag).text();
+        //     // console.log($(tag).text());
+        // });
+        // console.log(mobileInformation);
     } catch (error) {
-
+        console.log(error);
     }
 }
 amazonScrapping();
