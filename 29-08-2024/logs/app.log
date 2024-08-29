@@ -1,0 +1,6 @@
+2024-08-29T17:57:57.861Z info: Received a GET request for /
+2024-08-29T17:58:54.371Z info: Received a GET request for /
+2024-08-29T17:58:54.373Z error: This is an error message
+2024-08-29T17:58:54.374Z warn: This is a warning message
+2024-08-29T17:58:54.374Z info: This is an info message
+2024-08-29T17:58:54.375Z info: Request received: 
