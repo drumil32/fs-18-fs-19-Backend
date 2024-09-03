@@ -31,7 +31,7 @@ const App = () => {
       </form>
       {shortedUrl && <p>Your shortened URL is: {shortedUrl}</p>}
     </>
-  )
+  );
 }
 
 export default App
