@@ -9,6 +9,8 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+console.log(process.env.firstName);
+
 app.use(express.json());
 
 export const logger = winston.createLogger({
