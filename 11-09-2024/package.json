@@ -1,0 +1,19 @@
+{
+  "name": "11-09-2024",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.20.0",
+    "kickbox": "^2.0.4",
+    "nodemailer": "^6.9.15"
+  }
+}
